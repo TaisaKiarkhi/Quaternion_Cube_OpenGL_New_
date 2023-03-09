@@ -1,11 +1,10 @@
 #include "Camera.h"
 
-Camera::Camera(glm::vec3 startPosition, glm::vec3 startUp)
+Camera::Camera()
 {
-	position = startPosition;
-	worldUp = startUp;
-	front = glm::vec3(0.0f, 0.0f, -1.0f);
-	up = glm::vec3(0.0f, 0.0f, 1.0f);
+	position = glm::vec3(2.0f, 1.0f, 10.0f);
+	view_direction = glm::vec3(0.0f, 0.0f, -3.0f);
+	up = glm::vec3(0.0f, 1.0f, 0.0f);
 
 }
 
@@ -13,7 +12,14 @@ Camera::~Camera()
 {
 }
 
+void Camera::mouse_update(const glm::vec2 mouse_pos)
+{
+	glm::vec2 mouse_delta = mouse_pos - old_mouse_pos;
+	view_direction = glm::mat3(glm::rotate(glm::mat4(1.0f), 0.0f, (glm::radians(mouse_delta.x), up )))*view_direction;
+	old_mouse_pos = mouse_pos;
+}
+
 glm::mat4 Camera::return_look_at()
 {
-	return glm::lookAt(position, position+front, up);
+	return glm::lookAt(position, position + view_direction, up);
 }

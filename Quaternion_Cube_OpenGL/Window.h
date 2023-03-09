@@ -27,6 +27,9 @@ public:
 
 	void init_meshes();
 	void create_shaders();
+	static void mouse_handle(GLFWwindow* window, double x_pos, double y_pos);
+    void Call_Back();
+
 
 	GLint _model_location;
 	GLint _projection_location;

@@ -2,35 +2,35 @@
 
 XYZ::XYZ()
 {
-//vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         1.0f,  0.0f,  0.0f });
-//vertex_holder.push_back(Vertex{ 1000.0f ,0.0f, 0.0f,      1.0f,  0.0f,  0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         0.0f,  1.0f,  0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,1000.0f ,0.0f,      0.0f,  1.0f,  0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         0.0f,  0.0f,  1.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   1000.0f,      0.0f,  0.0f,  1.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         1.0f,  0.0f,  0.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         1.0f,  0.0f,  0.0f });
+vertex_holder.push_back(Vertex{ 1000.0f ,0.0f, 0.0f,      1.0f,  0.0f,  0.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         0.0f,  1.0f,  0.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,1000.0f ,0.0f,      0.0f,  1.0f,  0.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         0.0f,  0.0f,  1.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   1000.0f,      0.0f,  0.0f,  1.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         1.0f,  0.0f,  0.0f });
+
+vertex_holder.push_back(Vertex{ 0.0f ,1000.0f ,0.0f,      0.0f,  1.0f,  0.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         1.0f,  0.0f,  0.0f });
+vertex_holder.push_back(Vertex{ -1000.0f ,0.0f,0.0f,       1.0f  ,0.0f  ,0.0f });
+vertex_holder.push_back(Vertex{ 0.0f  ,0.0f  , 0.0f,       0.0f  ,1.0f  ,0.0f });
+vertex_holder.push_back(Vertex{ 0.0f ,-1000.0f,0.0f,     0.0f  ,1.0f  ,0.0f });
+vertex_holder.push_back(Vertex{ 0.0f  ,0.0f  , 0.0f,       0.0f  ,0.0f  ,1.0f });
+vertex_holder.push_back(Vertex{ 0.0f  ,0.0f ,-1000.0f,    0.0f  ,0.0f  ,1.0f });
+
+//vertex_holder.push_back(Vertex{ 0,0,0,1,0,0 });
+//vertex_holder.push_back(Vertex{ 6,0,0,1,0,0 });
+//vertex_holder.push_back(Vertex{ 0,0,0,0,1,0 });
+//vertex_holder.push_back(Vertex{ 0,6,0,0,1,0 });
+//vertex_holder.push_back(Vertex{ 0,0,0,0,0,0 });
+//vertex_holder.push_back(Vertex{ 0,0,6,0,0,0 });
 //
-//vertex_holder.push_back(Vertex{ 0.0f ,1000.0f ,0.0f,      0.0f,  1.0f,  0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,0.0f ,   0.0f,         1.0f,  0.0f,  0.0f });
-//vertex_holder.push_back(Vertex{ -1000.0f ,0.0f,0.0f,       1.0f  ,0.0f  ,0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f  ,0.0f  , 0.0f,       0.0f  ,1.0f  ,0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f ,-1000.0f,0.0f,     0.0f  ,1.0f  ,0.0f });
-//vertex_holder.push_back(Vertex{ 0.0f  ,0.0f  , 0.0f,       0.0f  ,0.0f  ,1.0f });
-//vertex_holder.push_back(Vertex{ 0.0f  ,0.0f ,-1000.0f,    0.0f  ,0.0f  ,1.0f });
-
-vertex_holder.push_back(Vertex{ 0,0,0,1,0,0 });
-vertex_holder.push_back(Vertex{ 6,0,0,1,0,0 });
-vertex_holder.push_back(Vertex{ 0,0,0,0,1,0 });
-vertex_holder.push_back(Vertex{ 0,6,0,0,1,0 });
-vertex_holder.push_back(Vertex{ 0,0,0,0,0,0 });
-vertex_holder.push_back(Vertex{ 0,0,6,0,0,0 });
-
-vertex_holder.push_back(Vertex{ 0,0,0,1,0,0 });
-vertex_holder.push_back(Vertex{ -6,0,0,1,0,0 });
-vertex_holder.push_back(Vertex{ 0,0,0,0,1,0 });
-vertex_holder.push_back(Vertex{ 0,-6,0,0,1,0 });
-vertex_holder.push_back(Vertex{ 0,0,0,0,0,0 });
-vertex_holder.push_back(Vertex{ 0,0,-6,0,0,0 });
+//vertex_holder.push_back(Vertex{ 0,0,0,1,0,0 });
+//vertex_holder.push_back(Vertex{ -6,0,0,1,0,0 });
+//vertex_holder.push_back(Vertex{ 0,0,0,0,1,0 });
+//vertex_holder.push_back(Vertex{ 0,-6,0,0,1,0 });
+//vertex_holder.push_back(Vertex{ 0,0,0,0,0,0 });
+//vertex_holder.push_back(Vertex{ 0,0,-6,0,0,0 });
 
 
 

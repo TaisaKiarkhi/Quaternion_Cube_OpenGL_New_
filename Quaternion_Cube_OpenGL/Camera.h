@@ -8,15 +8,14 @@
 class Camera
 {
 public: 
-	Camera(glm::vec3 startPosition, glm::vec3 startUp);
+	Camera();
 	~Camera();
 	glm::vec3 position;
-	glm::vec3 front;
+	glm::vec3 view_direction;
 	glm::vec3 up;
-	glm::vec3 right;
-	glm::vec3 worldUp;
+	glm::vec2 old_mouse_pos;
 	
-
+	void mouse_update(const glm::vec2 mouse_pos);
 	glm::mat4 return_look_at();
 };
 
