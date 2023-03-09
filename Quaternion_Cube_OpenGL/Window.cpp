@@ -64,9 +64,15 @@ Window::Window()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //dont use double || when u put depth buffer bit, use ony one |
 
 		shader_list.at(0)->use_shader();
-		glm::mat4 projection_matrix = glm::perspective(glm::radians(90.0f), (GLfloat)buffer_w / (GLfloat)buffer_h, 0.1f, 100.0f);
+		glm::mat4 projection_matrix = glm::perspective(glm::radians(90.0f), (GLfloat)buffer_w / (GLfloat)buffer_h, 0.1f, 500.0f);
 		glm::mat4 view = camera->return_look_at();
-		glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
+		glPushMatrix();
+		glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), 60.0f, glm::vec3(0.0f, 1.0f, 0.0f));
+
+		glPopMatrix();
+		glPushMatrix();
+		 rotation = glm::rotate(glm::mat4(1.0f), 60.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+		glPopMatrix();
 		GLint project_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "projection");
 		GLint view_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "view");
 		GLint rotation_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "rotation");
@@ -77,9 +83,14 @@ Window::Window()
 
 		
 		shader_list.at(1)->use_shader();
-	   projection_matrix = glm::perspective(glm::radians(90.0f), (GLfloat)buffer_w / (GLfloat)buffer_h, 0.1f, 100.0f);
+	   projection_matrix = glm::perspective(glm::radians(90.0f), (GLfloat)buffer_w / (GLfloat)buffer_h, 0.1f, 500.0f);
 	    view = camera->return_look_at();
-		rotation = glm::rotate(glm::mat4(1.0f), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
+		glPushMatrix();
+		 rotation = glm::rotate(glm::mat4(1.0f), 60.0f, glm::vec3(0.0f, 1.0f, 0.0f));
+		glPopMatrix();
+		glPushMatrix();
+		rotation = glm::rotate(glm::mat4(1.0f), 60.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+		glPopMatrix();
 	    project_loc = glGetUniformLocation(shader_list.at(1)->Shader_ID, "projection");
 	    view_loc = glGetUniformLocation(shader_list.at(1)->Shader_ID, "view");
 		rotation_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "rotation");
