@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Quaternion.cpp" />
     <ClCompile Include="Quaternion_Cube_OpenGL.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="XYZ.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Quaternion.h" />
     <ClInclude Include="Shader.h" />

@@ -2,47 +2,47 @@
 
 Cube::Cube()
 {
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,        1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,         1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,         0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,         0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,       0.561f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,       0.561f, 0.0f, 1.0f });
 	
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,          1.0f, 0.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,           1.0f, 0.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,           0.0f, 1.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,           0.0f, 1.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,         0.561f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,         0.561f, 0.0f, 1.0f });
 	
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,          1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,          1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,          0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,          0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,         0.561f, 0.0f, 1.0f});
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,         0.561f, 0.0f, 1.0f});
 
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,         0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,         0.878f, 0.69f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,           1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,           1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,           0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,           0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,          0.561f, 0.0f, 1.0f});
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,          0.561f, 0.0f, 1.0f});
 
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,       1.0f, 0.412f, 0.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,        1.0f, 0.412f, 0.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,        1.0f, 0.412f, 0.0f });
-	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,        1.0f, 0.412f, 0.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,       1.0f, 0.412f, 0.0f });
-	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,       1.0f, 0.412f, 0.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,          1.0f, 0.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f, -0.5f,           1.0f, 0.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,           0.0f, 1.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ 0.5f, -0.5f,  0.5f,           0.0f, 1.0f, 1.0f  });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f,  0.5f,         0.561f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f, -0.5f, -0.5f,         0.561f, 0.0f, 1.0f });
 	//rm of the roof									 878		  1
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,       0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,        0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,       0.878f, 0.69f, 1.0f });
-	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,       0.878f, 0.69f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,         1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f, -0.5f,          1.0f, 0.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,          0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ 0.5f,  0.5f,  0.5f,          0.0f, 1.0f, 1.0f });
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f,  0.5f,        0.561f, 0.0f, 1.0f});
+	vertex_holder.push_back(Vertex{ -0.5f,  0.5f, -0.5f,        0.561f, 0.0f, 1.0f});
 }
 
 Cube::~Cube()

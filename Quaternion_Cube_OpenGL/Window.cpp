@@ -6,8 +6,10 @@
 #include <glm/glm/mat4x4.hpp>
 #include <glm/glm/gtc/type_ptr.hpp>
 #include <XYZ.h>
+#include <Camera.h>
 
 GLFWwindow* window;
+Camera* camera;
 
 static const char* VShader = "vertex_shader.vert";
 static const char* FShader = "fragment_shader.frag";
@@ -45,23 +47,37 @@ Window::Window()
 		glfwTerminate();
 	}
 
-	//glEnable(GL_DEPTH_TEST);
+	glEnable(GL_DEPTH_TEST);
 	glViewport(0, 0, buffer_w, buffer_h);
 
 	init_meshes();
 	create_shaders();
 	
+	camera = new Camera(glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	
 
 	while (!glfwWindowShouldClose(window)) {
 		glfwPollEvents();
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT); // GL_DEPTH_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT || GL_DEPTH_BUFFER_BIT);
 
 		shader_list.at(0)->use_shader();
+		glm::mat4 projection_matrix = glm::perspective(glm::radians(-90.0f), (GLfloat)buffer_w / (GLfloat)buffer_h, 0.1f, 100.0f);
+		glm::mat4 view = camera->return_look_at();
+		GLint project_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "projection");
+		GLint view_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "view");
+		glUniformMatrix4fv(project_loc, 1, GL_FALSE, glm::value_ptr(projection_matrix));
+		glUniformMatrix4fv(view_loc, 1, GL_FALSE, glm::value_ptr(view));
 		xyz->draw();
 
+		
 		shader_list.at(1)->use_shader();
+		projection_matrix = glm::perspective(glm::radians(90.0f), (GLfloat)buffer_w / (GLfloat)buffer_h, 0.1f, 1.0f);
+		 view = camera->return_look_at();
+		 project_loc = glGetUniformLocation(shader_list.at(1)->Shader_ID, "projection");
+		 view_loc = glGetUniformLocation(shader_list.at(0)->Shader_ID, "view");
+		 glUniformMatrix4fv(project_loc, 1, GL_FALSE, glm::value_ptr(projection_matrix));
+		glUniformMatrix4fv(view_loc, 1, GL_FALSE, glm::value_ptr(view));
 		cube->draw();
 
 		glUseProgram(0);
